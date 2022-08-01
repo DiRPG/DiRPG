@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "token",
+    "databaseConfig"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "default": "",
+      "title": "The token Schema",
+      "examples": [
+        "Discord Bot Token"
+      ]
+    },
+    "databaseConfig": {
+      "type": "object",
+      "default": {},
+      "title": "The databaseConfig Schema",
+      "required": [
+        "url",
+        "name"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "default": "",
+          "title": "The url Schema",
+          "examples": [
+            "MongoDB URL"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "default": "",
+          "title": "The name Schema",
+          "examples": [
+            "MongoDB Database Name"
+          ]
+        }
+      },
+      "examples": [{
+        "url": "MongoDB URL",
+        "name": "MongoDB Database Name"
+      }]
+    }
+  },
+  "examples": [{
+    "token": "Discord Bot Token",
+    "databaseConfig": {
+      "url": "MongoDB URL",
+      "name": "MongoDB Database Name"
+    }
+  }]
+}

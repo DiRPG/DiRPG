@@ -1,11 +1,15 @@
+import database.Database
+import world.PlaceManager
 
+object DiRPG {
 
-class DiRPG(val config: Config) {
+    lateinit var config: Config
+    suspend fun start(config: Config) {
+        this.config = config
 
-
-
-    fun start() {
-
+        PlaceManager.loadPlaces()
+        Database.connect(config.databaseConfig)
+        Bot.start(config)
     }
 
 }

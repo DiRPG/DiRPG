@@ -11,7 +11,8 @@ val jsonBuilder = Json {
 
 @Serializable
 data class Config(
-    val token: String = "TOKEN"
+    val token: String = "TOKEN",
+    val databaseConfig: DatabaseConfig = DatabaseConfig()
 ) {
     companion object {
         fun loadFromFile(file: File): Config {
@@ -26,3 +27,9 @@ data class Config(
         }
     }
 }
+
+@Serializable
+data class DatabaseConfig(
+    val url: String = "MongoDB URL",
+    val name: String = "MongoDB Database Name"
+)

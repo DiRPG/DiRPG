@@ -1,6 +1,6 @@
 package world
 
-class WorldObject {
+interface WorldObject {
 
 
 

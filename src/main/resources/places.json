@@ -1,0 +1,55 @@
+{
+  "defaultPlace": "seoul",
+  "places": {
+    "seoul": {
+      "name": "Seoul",
+      "type": "big_city",
+      "links": [
+        "washington_dc",
+        "tokyo",
+        "paris",
+        "london"
+      ]
+    },
+    "washington_dc": {
+      "name": "Washington D.C.",
+      "type": "big_city",
+      "links": [
+        "seoul",
+        "tokyo",
+        "paris",
+        "london"
+      ]
+    },
+    "tokyo": {
+      "name": "Tokyo",
+      "type": "big_city",
+      "links": [
+        "seoul",
+        "washington_dc",
+        "paris",
+        "london"
+      ]
+    },
+    "paris": {
+      "name": "Paris",
+      "type": "big_city",
+      "links": [
+        "seoul",
+        "washington_dc",
+        "tokyo",
+        "london"
+      ]
+    },
+    "london": {
+      "name": "London",
+      "type": "big_city",
+      "links": [
+        "seoul",
+        "washington_dc",
+        "tokyo",
+        "paris"
+      ]
+    }
+  }
+}
